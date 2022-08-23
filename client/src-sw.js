@@ -25,36 +25,36 @@ warmStrategyCache({
 });
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
-//  const cacheName = 'static-resources';
-//  const CallbackMatch = ({ request }) =>{
-//    console.log(request);
-//    return(
-//      request.destination === 'style' || request.destination === 'script'
-//    );
-//  };
+ const cacheName = 'static-resources';
+ const CallbackMatch = ({ request }) =>{
+   console.log(request);
+   return(
+     request.destination === 'style' || request.destination === 'script'
+   );
+ };
 
-//  registerRoute(
-//   CallbackMatch,
-//   new offlineFallback({
-//     cacheName,
-//     plugins: [
-//       new CacheableResponsePlugin({
-//         statuses: [0, 200],
-//       }),
-//     ],
-//   })
-// );
-registerRoute(
-  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
-
-  new StaleWhileRevalidate({
-    cacheName: "asset-cache",
+ registerRoute(
+  CallbackMatch,
+  new offlineFallback({
+    cacheName,
     plugins: [
       new CacheableResponsePlugin({
-        statuses: [0, 200]
-      })
-    ]
+        statuses: [0, 200],
+      }),
+    ],
   })
 );
+// registerRoute(
+//   ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+
+//   new StaleWhileRevalidate({
+//     cacheName: "asset-cache",
+//     plugins: [
+//       new CacheableResponsePlugin({
+//         statuses: [0, 200]
+//       })
+//     ]
+//   })
+// );
 
 
