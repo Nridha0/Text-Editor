@@ -1,7 +1,7 @@
 # Text Editor Starter Code
 
 ## Table of content
--[Description](#description)
+- [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Pictures](#pictures)
