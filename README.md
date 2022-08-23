@@ -22,9 +22,9 @@ a text editor that runs in the browser. The app will be a single-page applicatio
 `npm start`
 
 # Pictures
-[MockUp](./Develop/Assets/Screen%20Shot%200.png)
-[  ](./Develop/Assets/Screen%20Shot%201.png)
-[  ](./Develop/Assets/Screen%20Shot%202.png)
+![MockUp](./Develop/Assets/Screen%20Shot%200.png)
+![  ](./Develop/Assets/Screen%20Shot%201.png)
+![  ](./Develop/Assets/Screen%20Shot%202.png)
 
 # Contributing
 [Noor Ridha](https://github.com/Nridha0)
